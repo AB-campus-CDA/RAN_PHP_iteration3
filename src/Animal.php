@@ -13,7 +13,13 @@ abstract class Animal
 
     public function __tostring()
     {
-        return $this->makeNoise();
+        return self::class;
+    }
+
+    public static function getShortName() :string
+    {
+        $path = explode('\\', static::class);
+        return array_pop($path);
     }
 
     public function getName() :string

@@ -37,12 +37,14 @@ $zoo = [];
 foreach ($animalsQuantity as $animal => $quantity) {
 
     for ($i=1; $i<= $quantity; $i++) {
-        $name = $animal.$i;
 
         if (class_exists($animal,true)) {
+            $name = $animal::getShortName().$i;
             $newAnimal = new $animal($name);
+
         } else {
-            $class = 'App\\animals\\'.$animal;
+            $class = 'App\\animals\\'.$animal;      // ok
+            $name = $animal.$i;
             $newAnimal = new $class($name);
         }
 
