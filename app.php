@@ -52,4 +52,10 @@ foreach ($animalsQuantity as $animal => $quantity) {
     }
 }
 
-var_dump($zoo);
+print_r($zoo);
+
+
+// animal cri
+foreach ($zoo as $animalObj) {
+    echo $animalObj->noise();
+}

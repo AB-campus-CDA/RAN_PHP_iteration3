@@ -6,6 +6,6 @@ trait MakeBloublou
 {
     protected function makeNoise() :string
     {
-        return "Bloubloublou";
+        return "Bloubloublou".PHP_EOL;
     }
 }

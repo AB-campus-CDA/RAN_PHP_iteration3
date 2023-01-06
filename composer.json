@@ -3,7 +3,8 @@
     "autoload": {
         "psr-4": {
             "App\\":"src",
-            "App\\animals\\": "src/animals"
+            "App\\animals\\": "src/animals",
+            "App\\"
         }
     }
 }

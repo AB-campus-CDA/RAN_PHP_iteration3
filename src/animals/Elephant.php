@@ -4,10 +4,10 @@ namespace App\animals;
 
 use App\Animal;
 
-class Elephant extends Animal
+class Elephant extends Animal implements CanWalk
 {
     protected function makeNoise() :string
     {
-        return "toooooooouuut";
+        return "toooooooouuut".PHP_EOL;
     }
 }

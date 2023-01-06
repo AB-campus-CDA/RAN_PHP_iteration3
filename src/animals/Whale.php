@@ -4,10 +4,10 @@ namespace App\animals;
 
 use App\Animal;
 
-class Whale extends Animal
+class Whale extends Animal implements CanSwim
 {
     protected function makeNoise() :string
     {
-        return "splash";
+        return "splash".PHP_EOL;
     }
 }

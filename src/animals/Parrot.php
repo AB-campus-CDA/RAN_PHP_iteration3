@@ -4,10 +4,10 @@ namespace App\animals;
 
 use App\Animal;
 
-class Parrot extends Animal
+class Parrot extends Animal implements CanFly, CanWalk
 {
     protected function makeNoise() :string
     {
-        return "coco";
+        return "coco".PHP_EOL;
     }
 }
