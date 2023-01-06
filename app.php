@@ -16,9 +16,9 @@ use App\{
 
 
 $animalsQuantity = [
-    'Fish' => 5,
-    'BubbleFish' => 3,
-    'CatFish' => 2,
+    Fish::class => 5,
+    BubbleFish::class => 3,
+    CatFish::class => 2,
     'ClownFish' => 1,
     'Elephant' => 2,
     'Zebra' => 1,
@@ -31,15 +31,18 @@ $zoo = [];
 
 // fill the zoo with animals
 foreach ($animalsQuantity as $animal => $quantity) {
+
     for ($i=1; $i<= $quantity; $i++) {
         $name = $animal.$i;
-        $class = 'App\\'.$animal;
-        if (class_exists($class,true)) {
-            $newAnimal = new $class($name);
-            array_push($zoo, $newAnimal);
+
+        if (class_exists($animal,true)) {
+            $newAnimal = new $animal($name);
         } else {
-            echo "La classe $animal n'existe pas".PHP_EOL;
+            $class = 'App\\'.$animal;
+            $newAnimal = new $class($name);
         }
+
+        array_push($zoo, $newAnimal);
     }
 }
 
