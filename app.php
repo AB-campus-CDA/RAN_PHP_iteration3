@@ -1,5 +1,9 @@
 <?php
 namespace App;
+use App\animals\BubbleFish;
+use App\animals\CatFish;
+use App\animals\Fish;
+
 require 'vendor/autoload.php';
 /*
 use App\{
@@ -38,7 +42,7 @@ foreach ($animalsQuantity as $animal => $quantity) {
         if (class_exists($animal,true)) {
             $newAnimal = new $animal($name);
         } else {
-            $class = 'App\\'.$animal;
+            $class = 'App\\animals\\'.$animal;
             $newAnimal = new $class($name);
         }
 

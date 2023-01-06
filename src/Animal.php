@@ -11,6 +11,11 @@ abstract class Animal
         $this->name = $name;
     }
 
+    public function __tostring()
+    {
+        return $this->makeNoise();
+    }
+
     public function getName() :string
     {
         return $this->name;
